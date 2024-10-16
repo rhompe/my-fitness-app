@@ -1,38 +1,212 @@
-.App {
-  text-align: center;
+/* src/App.css */
+
+/* Tipografía general */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Navbar */
+.navbar {
+  background-color: #2a2a2a;
+  padding: 1rem;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-wrap: wrap;
+}
+
+.navbar h1 {
+  font-family: 'Anton', sans-serif;
+  font-size: 2rem;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.navbar-links li a {
+  color: white;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.navbar-links li a:hover {
+  color: #ff5722;
+}
+
+/* Títulos generales */
+h2 {
+  font-family: 'Anton', sans-serif;
+  font-size: 2.5rem;
+  color: #ff5722;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+  color: #ff5722;
+  margin-bottom: 1rem;
+}
+
+/* Botones generales */
+button {
+  background-color: #ff5722;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #e64a19;
+}
+
+/* Estilo de los contenedores generales */
+.container {
+  padding: 2rem;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.section {
+  padding: 4rem 0;
+}
+
+/* Tarjetas */
+.card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Listas */
+ul {
+  list-style: none;
+}
+
+ul li {
+  margin: 0.5rem 0;
+}
+
+/* Footer */
+footer {
+  background-color: #2a2a2a;
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+
+
+
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  .navbar-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
   }
+
+  .navbar h1 {
+    margin-bottom: 1rem;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* Estilos adicionales para los ejercicios */
+
+/* Ajustes generales para el contenedor */
+.muscle-group {
+  margin-bottom: 2rem;
+}
+
+.muscle-group h3 {
+  font-size: 1.8rem;
+  color: #ff5722;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.exercise-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h4 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.exercise-img {
+  width: 100%;
+  height: auto;
+  margin-top: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
