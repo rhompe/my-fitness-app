@@ -16,39 +16,6 @@ body {
   line-height: 1.6;
 }
 
-/* Navbar */
-.navbar {
-  background-color: #2a2a2a;
-  padding: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.navbar h1 {
-  font-family: 'Anton', sans-serif;
-  font-size: 2rem;
-  color: white;
-}
-
-.navbar-links {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
-}
-
-.navbar-links li a {
-  color: white;
-  font-size: 1.2rem;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.navbar-links li a:hover {
-  color: #ff5722;
-}
-
 /* Títulos generales */
 h2 {
   font-family: 'Anton', sans-serif;
@@ -127,19 +94,7 @@ footer {
 
 /* Responsividad */
 @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-  }
 
-  .navbar-links {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  .navbar h1 {
-    margin-bottom: 1rem;
-  }
 
   .container {
     padding: 1rem;
@@ -209,4 +164,46 @@ footer {
   margin-top: 1rem;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo del Select */
+select {
+  background-color: #ff5722;
+  color: white;
+  padding: 0.7rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 2rem;
+  /* Espacio debajo */
+  width: 100%;
+  /* Ocupa todo el ancho del contenedor */
+}
+
+select:hover {
+  background-color: #e64a19;
+}
+
+select:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(255, 87, 34, 0.7);
+  /* Brillo cuando está enfocado */
+}
+
+/* Estilo de las opciones del Select */
+select option {
+  background-color: #fff;
+  color: #333;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+}
+
+/* Opciones adicionales para la responsividad */
+@media (max-width: 768px) {
+  select {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
 }
