@@ -9,6 +9,8 @@ import ExerciseDetail from './components/ExerciseDetail';
 import './App.css';
 import MuscleGroups from './components/MuscleGroups'; 
 import HomeWorkoutPlan from './pages/HomeWorkoutPlan';
+import Generador from './pages/Tickets/Generador';
+import Ticket from './pages/Tickets/Ticket';
 
 
 const App = () => {
@@ -23,6 +25,8 @@ const App = () => {
         <Route path="/toning" element={<Toning />} />
         <Route path="/exercise/:name" element={<ExerciseDetail />} />
         <Route path="/workout-plan" element={<HomeWorkoutPlan />} />
+        <Route path="/tickets/generador" element={<Generador />} />
+        <Route path="/tickets/ticket" element={<Ticket />} />
       </Routes>
     </Router>
   );
