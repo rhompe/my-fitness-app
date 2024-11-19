@@ -11,6 +11,7 @@ import MuscleGroups from './components/MuscleGroups';
 import HomeWorkoutPlan from './pages/HomeWorkoutPlan';
 import Generador from './pages/Tickets/Generador';
 import Ticket from './pages/Tickets/Ticket';
+import OxxoReceipt from './pages/Tickets/oxxo-receipt';
 
 
 const App = () => {
@@ -27,6 +28,7 @@ const App = () => {
         <Route path="/workout-plan" element={<HomeWorkoutPlan />} />
         <Route path="/tickets/generador" element={<Generador />} />
         <Route path="/tickets/ticket" element={<Ticket />} />
+        <Route path="/tickets/oxxo-receipt" element={<OxxoReceipt />} />
       </Routes>
     </Router>
   );
